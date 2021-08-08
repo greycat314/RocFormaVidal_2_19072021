@@ -7,7 +7,7 @@
         <meta name="description" content="Description de la page">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
         <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="icon" type="image/png" href="img/favicon.png">
+        <link rel="icon" type="image/png" href="img/favicon3.png">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
@@ -16,95 +16,211 @@
             
             <header>
                 <img src="img/Reservia.svg" alt="Logo Reservia">
-                <nav>
-                    <a href="">Hébergements</a>
-                    <a href="">Activités</a>
-                    <a href="">S'inscrire</a>
-                </nav>
+                <div> </div>
+                <a href="#lodging">Hébergements</a>
+                <a href="#activities">Activités</a>
+                <a href="">S'inscrire</a>
             </header>
 
             <section class="box_search">
                 <h2>Trouvez votre hébergement pour des vacances de rêve</h2>
-                <p>En plein centre villeou en pleine nature</p>
-                <div>
+                <p>En plein centre ville ou en pleine nature</p>
+                <div id="box_search_form">
                     <i class="fas fa-map-marker-alt"></i>
-                    <form method="POST" action="">
-                        <!-- Leave the 2 inputs on the same line, otherwise horizontal offset on the display -->
-                        <input type="text" name="city_name" id="city_name" value="Marseille, France"><input type="submit" id="city_name_submit" value="Rechercher">
+                    <form method="POST" action="index.html">
+                        <!-- Leave the 3 markup (input, input, button) on the same line, otherwise horizontal offset on the display -->
+                        <input type="text" name="city_name" id="city_name" value=""><input type="submit" id="city_name_submit" value="Rechercher"><button id="city_name_button"  type="button"><i class="fas fa-search"></i></button>
                     </form>
                 </div>
             </section>
 
             <section class="filter">
                 <h3>Filtres</h3>
-                <div>
-                    <a href="">
-                        <i class="fas fa-money-bill-wave"></i>
-                        <span>Économique</span>
-                    </a>
-                </div>
-                <div>
-                    <a href="">
-                        <i class="fas fa-child"></i>
-                        <span>Familial</span>
-                    </a>
-                </div>
-                <div>
-                    <a href="">
-                        <i class="fas fa-heart"></i>
-                        <span>Romantique</span>
-                    </a>
-                </div>
-                <div>
-                    <a href="">
-                        <i class="fas fa-dog"></i>
-                        <span>Animaux autorisés</span>
-                    </a>
-                </div>
+
+                    <div class="cube" id="filter_economy">
+                        <div class="cube_face1">
+                            <a href="">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Économique</span>
+                            </a>   
+                        </div>
+                        <div class="cube_face2">
+                            <a href="">
+                                <i class="fas fa-money-bill-wave"></i>
+                                <span>Économique</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cube" id="filter_family">
+                        <div class="cube_face1">
+                            <a href="">
+                                <i class="fas fa-child"></i>
+                                <span>Familial</span>
+                            </a> 
+                        </div>
+                        <div class="cube_face2">
+                            <a href="">
+                                <i class="fas fa-child"></i>
+                                <span>Familial</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="cube" id="filter_romantic">
+                        <div class="cube_face1">
+                            <a href="">
+                                <i class="fas fa-heart"></i>
+                                <span>Romantique</span>
+                            </a>
+                        </div>
+                        <div class="cube_face2">
+                            <a href="">
+                                <i class="fas fa-heart"></i>
+                                <span>Romantique</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="cube" id="filter_pets_allowed">
+                        <div class="cube_face1">
+                            <a href="">
+                                <i class="fas fa-dog"></i>
+                                <span>Animaux autorisés</span>
+                            </a>
+                        </div>
+                        <div class="cube_face2">
+                            <a href="">
+                                <i class="fas fa-dog"></i>
+                                <span>Animaux autorisés</span>
+                            </a>
+                        </div>
+                    </div>
             </section>
                 
             <div class="information">
-                <i class="fas fa-info-circle"></i>
+                <img src="img/fal_fa-info-circle.png" alt="Info">
                 <p>Plus de 500 logements sont disponibles dans cette ville</p>
             </div>
 
-            <div class="article">
+            <div id="box_article_aside" class="article_aside">
+            
                 <article>
-                    <h2>Hébergements à Marseille</h2>
-                    <div class="article_item">
-                        <img src="" alt="" />
-                        <p class="title">Auberge la Cannebière</p>
-                        <p class="price">Nuit à partir de 25<b>€</b></p>
-                        <p class="opinion"><span class="opinion_yes">★★★★</span><span class="opinion_no">★</span></p>
-                    </div>
-                    <div class="article_item">
-                        <img src="" alt="" />
+                    <h2 id="lodging" >Hébergements à Marseille</h2>
+                    
+                    <a href="">
+                        <div class="article_item">
+                            <img 
+                                srcset="
+                                    img/article_aside/hostel_la_cannebiere_235w.jpg 235w,
+                                    img/article_aside/hostel_la_cannebiere_320w.jpg 320w"
+                                sizes="
+                                    (max-width: 635px) 320px,
+                                    (min-width: 636px) 235px,
+                                    320px"
+                                src="img/article_aside/hostel_la_cannebiere_235w.jpg" alt="Hostel la Cannebière"
+                            >
+                            <p class="title">Auberge la Cannebière</p>
+                            <p class="price">Nuit à partir de 25<b>€</b></p>
+                            <p class="opinion"><span class="opinion_yes">★★★★</span><span class="opinion_no">★</span></p>
+                        </div>
+                    </a>
+
+                    <a href="">
+                        <div class="article_item">
+                        <img 
+                            srcset="
+                                img/article_aside/port_hotel_235w.jpg 235w,
+                                img/article_aside/port_hotel_320w.jpg 320w"
+                            sizes="
+                                (max-width: 635px) 320px,
+                                (min-width: 636px) 235px,
+                                320px"
+                            src="img/article_aside/port_hotel_235w.jpg" alt="Port hotel"
+                        >
                         <p class="title">Hôtel du port</p>
                         <p class="price">Nuit à partir de 52<b>€</b></p>
                         <p class="opinion"><span class="opinion_yes">★★★★★</span><span class="opinion_no"></span></p>
                     </div>
-                    <div class="article_item">
-                        <img src="" alt="" />
+                    </a>
+
+                    <a href="">
+                        <div class="article_item">
+                        <img 
+                            srcset="
+                                img/article_aside/seagulls_hotel_235w.jpg 235w,
+                                img/article_aside/seagulls_hotel_320w.jpg 320w"
+                            sizes="
+                                (max-width: 635px) 320px,
+                                (min-width: 636px) 235px,
+                                320px"
+                                src="img/article_aside/seagulls_hotel_235w.jpg" alt="Port hotel"
+                        >
                         <p class="title">Hôtel Les Mouettes</p>
                         <p class="price">Nuit à partir de 76<b>€</b></p>
                         <p class="opinion"><span class="opinion_yes">★★★★</span><span class="opinion_no">★</span></p>
                     </div>
-
-                    <div class="article_item">
-                        <img src="" alt="" />
-                    </div>
-
-                    <div class="article_item">
-                        <img src="" alt="" />
-                    </div>
-
-                    <div class="article_item">
-                        <img src="" alt="" />
-                    </div>
+                    </a>
 
                     <a href="">
-                        Afficher plus
+                        <div class="article_item">
+                        <img 
+                            srcset="
+                                img/article_aside/sea_hotel_235w.jpg 235w,
+                                img/article_aside/sea_hotel_320w.jpg 320w"
+                            sizes="
+                                (max-width: 635px) 320px,
+                                (min-width: 636px) 235px,
+                                320px"
+                                src="img/article_aside/sea_hotel_235w.jpg" alt="Sea hotel"
+                        >
+                        <p class="title">Hôtel de la mer</p>
+                        <p class="price">Nuit à partir de 46<b>€</b></p>
+                        <p class="opinion"><span class="opinion_yes">★★★</span><span class="opinion_no">★★</span></p>
+                    </div>
                     </a>
+
+                    <a href="">
+                        <div class="article_item">
+                        <img 
+                            srcset="
+                                img/article_aside/hostel_the_basket_235w.jpg 235w,
+                                img/article_aside/hostel_the_basket_320w.jpg 320w"
+                            sizes="
+                                (max-width: 635px) 320px,
+                                (min-width: 636px) 235px,
+                                320px"
+                                src="img/article_aside/hostel_the_basket_235w.jpg" alt="Hostel The Basket"
+                        >
+                        <p class="title">Auberge Le Panier</p>
+                        <p class="price">Nuit à partir de 23<b>€</b></p>
+                        <p class="opinion"><span class="opinion_yes">★★★★</span><span class="opinion_no">★</span></p>
+                    </div>
+                    </a>
+
+                    <a href="">
+                        <div class="article_item">
+                        <img 
+                            srcset="
+                                img/article_aside/amina_hotel_235w.jpg 235w,
+                                img/article_aside/amina_hotel_320w.jpg 320w"
+                            sizes="
+                                (max-width: 635px) 320px,
+                                (min-width: 636px) 235px,
+                                320px"
+                                src="img/article_aside/amina_hotel_235w.jpg" alt="Amina Hotel"
+                        >
+                        <p class="title">Hôtel chez Amina</p>
+                        <p class="price">Nuit à partir de 96<b>€</b></p>
+                        <p class="opinion"><span class="opinion_yes">★★★★★</span><span class="opinion_no"></span></p>
+                    </div>
+                    </a>   
+                    
+                    <div class="article_next">
+                        <a href="">
+                            Afficher plus
+                        </a>
+                    </div>
                 </article>
 
                 <aside>
@@ -113,93 +229,164 @@
                         <i class="fas fa-chart-line"></i>
                     </div>
                     
-                    <div class="aside_item">
-                        <img src="" alt="" />
-                        <div>
-                            <p class="title"><b>Hôtel Le soleil du matin</b></p>
-                            <p>Nuit à partir de 128<b>€</b></p>
-                            <p><span class="opinion_yes">★★★★★</span><span class="opinion_no"></span></p>
+                    <a href="">
+                        <div class="aside_item">
+                            <img src="img/aside_popular/morning_sun_hotel_125w.jpg" alt="Morning Sun Hotel" width="125" height="135" />
+                            <div>
+                                <p class="title"><b>Hôtel Le soleil du matin</b></p>
+                                <p>Nuit à partir de 128<b>€</b></p>
+                                <p><span class="opinion_yes">★★★★★</span><span class="opinion_no"></span></p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                     
-                    <div class="aside_item">
-                        <img src="" alt="" />
-                        <div>
-                            <p class="title"><b>Au coeur de l'eau Chambres d'hôtes</b></p>
-                            <p>Nuit à partir de 71<b>€</b></p>
-                            <p><span class="opinion_yes">★★★★</span><span class="opinion_no">★line-height: 20px;</span></p>
+                    <a href="">
+                        <div class="aside_item">
+                            <img src="img/aside_popular/in_the_heart_of_the_water_125w.jpg" alt="Hotel In the heart of the water" width="125" height="135" />
+                            <div>
+                                <p class="title"><b>Au coeur de l'eau Chambres d'hôtes</b></p>
+                                <p>Nuit à partir de 71<b>€</b></p>
+                                <p><span class="opinion_yes">★★★★</span><span class="opinion_no">★</span></p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="aside_item">
-                        <img src="" alt="" />
-                        <div>
-                            <p class="title"></p>
-                            <p class="price"></p>
-                            <p class="opinion"></p>
+                    </a>
+                    
+                    <a href="">
+                        <div class="aside_item">
+                            <img src="img/aside_popular/all_blue_and_white_hotel_125w.jpg" alt="All blue and white hotel" width="125" height="135" />
+                            <div>
+                                <p class="title"><b>Hôtel Tout bleu et Blanc</b></p>
+                                <p class="price">Nuit à partir de 68<b>€</b></p>
+                                <p><span class="opinion_yes">★★★★</span><span class="opinion_no">★</span></p>
+                            </div>
                         </div>
-                    </div>
+                        </a>
                 </aside>
 
-                <section class="activities">
+                <section id="activities" class="activities">
                     <h2>Activités à Marseille</h2>
+                    
                     <div class="activities_box">
-                        <figure>
-                            <img src="" alt="" width="300" height="388" />
-                            <figcaption>Vieux Port</figcaption>
-                        </figure>
-                    </div>
-                    <div class="activities_box">
-                        <figure>
-                            <img src="" alt="" width="300" height="180" />
-                            <figcaption>Fort de Pomègues</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="" alt="" width="300" height="110" />
-                            <figcaption>Îles du Frioul</figcaption>
-                        </figure>
-                    </div>
-                    <div class="activities_box">
-                        <figure>
-                            <img src="" alt="" width="300" height="388" />
-                            <figcaption>Parc National des Calanques</figcaption>
-                        </figure>
-                    </div>
-                    <div class="activities_box">
-                        <figure>
-                            <img src="" alt=""  width="300" height="140" />
-                            <figcaption>Notre-Dame-de-la-Garde</figcaption>
-                        </figure>
-                        <figure>
-                            <img src="" alt="" width="300" height="150" />
-                            <figcaption>Parc Longchamp</figcaption>
-                        </figure>
+                        <a href="">
+                            <figure>    
+                                <img 
+                                    srcset="
+                                        img/activities/old_port_330w.jpg 330w,
+                                        img/activities/old_port_300w.jpg 300w"
+                                    sizes="
+                                        (max-width: 1360px) 330px,
+                                        (min-width: 1361px) 300px,
+                                        330px"
+                                    src="img/activities/old_port_330w.jpg" alt="Old Port"
+                                >
+                                <figcaption>Vieux Port</figcaption>
+                            </figure>
+                        </a>
+                        
+                        <a href="">
+                            <figure>
+                                <img 
+                                    srcset="
+                                        img/activities/harbor_of_pomegues_330w.jpg 330w,
+                                        img/activities/harbor_of_pomegues_300w.jpg 300w"
+                                    sizes="
+                                        (max-width: 1360px) 330px,
+                                        (min-width: 1361px) 300px,
+                                        330px"
+                                    src="img/activities/harbor_of_pomegues_330w.jpg" alt="Harbor of Pomègues"
+                                >
+                                <figcaption>Fort de Pomègues</figcaption>
+                            </figure>
+                        </a>
+                        
+                        <a href="">
+                            <figure>
+                                <img 
+                                    srcset="
+                                        img/activities/frioul_islands_330w.jpg 330w,
+                                        img/activities/frioul_islands_300w.jpg 300w"
+                                    sizes="
+                                        (max-width: 1360px) 330px,
+                                        (min-width: 1361px) 300px,
+                                        330px"
+                                    src="img/activities/frioul_islands_330w.jpg" alt="Frioul Island"
+                                >
+                                <figcaption>Îles du Frioul</figcaption>
+                            </figure>
+                        </a>
+                        
+                        <a href="">
+                            <figure>
+                                <img 
+                                    srcset="
+                                        img/activities/calanques_national_park_330w.jpg 330w,
+                                        img/activities/calanques_national_park_300w.jpg 300w"
+                                    sizes="
+                                        (max-width: 1360px) 330px,
+                                        (min-width: 1361px) 300px,
+                                        330px"
+                                    src="img/activities/calanques_national_park_330w.jpg" alt="Calanques National Park"
+                                >
+                                <figcaption>Parc National des Calanques</figcaption>
+                            </figure>
+                        </a>
+                        
+                        <a href="">
+                            <figure>
+                                <img 
+                                    srcset="
+                                        img/activities/our_lady_of_the_guard_330w.jpg 330w,
+                                        img/activities/our_lady_of_the_guard_300w.jpg 300w"
+                                    sizes="
+                                        (max-width: 1360px) 330px,
+                                        (min-width: 1361px) 300px,
+                                        330px"
+                                    src="img/activities/our_lady_of_the_guard_330w.jpg" alt="Our Lady of a Guard"
+                                >
+                                <figcaption>Notre-Dame-de-la-Garde</figcaption>
+                            </figure>
+                        </a>
+                        
+                        <a href="">
+                            <figure>
+                                <img 
+                                    srcset="
+                                        img/activities/longchamp_park_330w.jpg 330w,
+                                        img/activities/longchamp_park_300w.jpg 300w"
+                                    sizes="
+                                        (max-width: 1360px) 330px,
+                                        (min-width: 1361px) 300px,
+                                        330px"
+                                    src="img/activities/longchamp_park_330w.jpg" alt="Longchamp Park"
+                                >
+                                <figcaption>Parc Longchamp</figcaption>
+                            </figure>
+                        </a>
+
                     </div>
                 </section>
             </div>
-            
         </div>
 
-        <!-- <div class="box_footer"> -->
             <footer>
                 <section class="about">
                     <h3>A propos</h3>
-                    <a href="">Fonctionnement du site</a>
-                    <a href="">Conditions générales de vente</a>
-                    <a href="">Données et confidentialité</a>
+                    <p><a href="">Fonctionnement du site</a></p>
+                    <p><a href="">Conditions générales de vente</a></p>
+                    <p><a href="">Données et confidentialité</a></p>
                 </section>
+
                 <section class="accommodations">
                     <h3>Nos hébergements</h3>
-                    <a href="">Charte qualité</a>
-                    <a href="">Soumettre votre hôtel</a>
+                    <p><a  href="">Charte qualité</a></p>
+                    <p><a href="">Soumettre votre hôtel</a></p>
                 </section>
+
                 <section class="help">
                     <h3>Assistance</h3>
-                    <a href="">Centre d'aide</a>
-                    <a href="">Centre d'aide</a>
+                    <p><a href="">Centre d'aide</a></p>
+                    <p><a href="">Nous contacter</a></p> 
                 </section>
             </footer>
-        <!-- </div> -->
     </body>
-
 </html>
