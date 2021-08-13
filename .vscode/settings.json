@@ -1,0 +1,13 @@
+{
+    "editor.hover.delay": 2000,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "javascript.format.enable": false,
+    "typescript.format.enable": false,
+    "powermode.enabled": true,
+    "editor.fontFamily": "'Segoe UI', Consolas, 'Courier New', monospace",
+    "editor.semanticTokenColorCustomizations": null,
+    "editor.tokenColorCustomizations": null,
+    "workbench.colorCustomizations": {
+    
+}
+    }
