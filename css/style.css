@@ -91,6 +91,11 @@ header :nth-child(5) {
     font-weight: bold;
 }
 
+form {
+    display: flex;
+    
+}
+
 
 /*====================  Section - Article - Aside ====================*/
 
@@ -499,6 +504,16 @@ h2 {
 h3 {
     font-family: ralewaysemibold, arial, "sans-serif";
     font-size: 1.8rem;
+}
+
+div.article_item img, div.aside_item img, figure img {
+    clip-path: circle(100%);
+    transition: clip-path 600ms ease-in-out 300ms;
+}
+
+div.article_item:hover img, div.aside_item:hover img, figure:hover img {
+    clip-path: circle(50%);
+    transition:  clip-path 300ms ease-in-out 300ms;
 }
 
 
