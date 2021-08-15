@@ -24,7 +24,6 @@
     font-style: normal;
 }
 
-
 /*==================== html - body - box_main - header ====================*/
 
 html {
@@ -65,7 +64,7 @@ header img {
 }
 
 header div {
-    flex: 1 1 auto;
+    width: 860px;
 }
 
 header a {
@@ -78,24 +77,21 @@ header a:hover {
     padding-top: 48px;
 }
 
+header :nth-child(2) {
+    order: 2;
+}
+
 header :nth-child(3) {
     order: 3;
 }
 
 header :nth-child(4) {
-    order: 4;
-}
-
-header :nth-child(5) {
-    order: 5;
-    font-weight: bold;
+    order: 4;font-weight: bold;
 }
 
 form {
     display: flex;
-    
 }
-
 
 /*====================  Section - Article - Aside ====================*/
 
@@ -107,7 +103,6 @@ section {
 .fas {
     text-align: center;
 }
-
 
 /*-------------------- <section class="box_search"> -------------------- */
 
@@ -167,7 +162,14 @@ section.box_search div i {
     font-size: 1.8rem;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
+    transition: all 300ms ease-in-out 300ms;
     cursor: pointer;
+}
+
+#city_name_submit:hover {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: all 300ms ease-in-out 300ms;
 }
 
 #city_name_button {
@@ -178,13 +180,17 @@ section.box_search div i {
 }
 
 #city_name_button i {
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
+    border-radius: 15px;
+    transition: border-radius 300ms ease-in-out 300ms; 
     color: #fff;
     background-color: #0065FC;
     cursor: pointer;
 }
 
+#city_name_button i:hover {
+    border-radius: 0;
+    transition: border-radius 300ms ease-in-out 300ms;
+}
 
 /*-------------------- <section class="filter"> -------------------- */
 
@@ -225,7 +231,6 @@ section.filter span {
     font-weight: 900;
     padding: 0 20px 0 10px;
 }
-
 
 /*-------------------- <section class="information"> -------------------- */
 
@@ -324,7 +329,6 @@ article div.article_next a {
     align-self: flex-end;
 }
 
-
 /*-------------------- <aside> -------------------- */
 
 aside {
@@ -398,7 +402,6 @@ div .aside_popular i {
     color: rgba(86, 86, 100, 0.4);
 }
 
-
 /*-------------------- <section class="activities"> -------------------- */
 
 section.activities {
@@ -444,7 +447,6 @@ figure figcaption {
     box-shadow: 2px 2px 5px #f2f2f2;
 }
 
-
 /*==================== footer ====================*/
 
 footer {
@@ -478,8 +480,12 @@ footer section a:hover {
     border-bottom: 2px solid black;
 }
 
-
 /*====================  Various tags ====================*/
+
+::selection {
+    color: #fff;
+    background-color: #ff4500;
+}
 
 ::selection {
     color: #fff;
@@ -516,7 +522,6 @@ div.article_item:hover img, div.aside_item:hover img, figure:hover img {
     transition:  clip-path 300ms ease-in-out 300ms;
 }
 
-
 /*==================== Cube 3D ====================*/
 
 .cube {
@@ -534,7 +539,7 @@ div.article_item:hover img, div.aside_item:hover img, figure:hover img {
 .cube div {
     position: absolute;
     display: flex;
-    justify-content: baseline;
+    justify-content: center;
     align-items: center;
     height: 46px;
     border: 2px solid #d9d9d9;
@@ -571,7 +576,6 @@ div.article_item:hover img, div.aside_item:hover img, figure:hover img {
     width: 250px;
 }
 
-
 /*==================== media ====================*/
 
 @media all and (max-width: 1430px) {
@@ -579,6 +583,7 @@ div.article_item:hover img, div.aside_item:hover img, figure:hover img {
         flex-flow: column nowrap;
         align-items: center;
     }
+    
     aside {
         order: -1;
         margin: 0 0 30px 0;
@@ -592,6 +597,7 @@ div.article_item:hover img, div.aside_item:hover img, figure:hover img {
         align-content: space-evenly;
         height: 650px;
     }
+
     section div.activities_box figure {
         margin-bottom: 20px;
     }
@@ -607,10 +613,12 @@ div.article_item:hover img, div.aside_item:hover img, figure:hover img {
     article #lodging {
         margin-bottom: 30px;
     }
+
     article .article_item {
         margin-right: 15px;
         margin-bottom: 15px;
     }
+
     article .article_next {
         width: 100%;
         margin-top: 15px;
@@ -621,6 +629,7 @@ div.article_item:hover img, div.aside_item:hover img, figure:hover img {
     section div.activities_box {
         height: max-content;
     }
+
     section div.activities_box figure {
         margin-bottom: 20px;
     }
@@ -643,42 +652,53 @@ div.article_item:hover img, div.aside_item:hover img, figure:hover img {
     .box_main {
         padding: 0 10px;
     }
+
     header {
         flex-flow: row wrap;
         justify-content: space-between;
         padding-top: 30px;
     }
+
     header img {
         margin: 0;
     }
+
     header div {
         flex: 1 1 63%;
     }
+
     header a {
         border-bottom: 2px solid rgba(0, 0, 0, 0);
         padding-top: 15px;
     }
+
     header a:hover {
         padding-top: 15px;
         border: 0;
         border-bottom: 2px solid #0065FC;
     }
-    header :nth-child(5) {
-        order: 2;
+
+    header :nth-child(4) {
+        order: 1;
     }
+
     section #box_search_form {
         justify-content: center;
     }
+
     #city_name {
         width: 245px;
         padding-right: 25px;
     }
+
     #city_name_button {
         margin-left: -12px;
     }
+
     #city_name_submit {
         border: 0px;
     }
+
     #city_name_submit {
         display: none;
     }
@@ -686,21 +706,17 @@ div.article_item:hover img, div.aside_item:hover img, figure:hover img {
 
 @media all and (max-width: 635px) {
     header div {
-        flex: 1 1 53%;
+        flex: 1 1 60%;
     }
     article {
         background-color: #fff;
     }
+
     div.article_aside {
         justify-content: center;
     }
+
     .article_aside article {
         justify-content: center;
-    }
-}
-
-@media all and (max-width: 485px) {
-    header div {
-        flex: 1 1 25%;
     }
 }
