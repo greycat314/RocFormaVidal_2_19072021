@@ -213,7 +213,6 @@ section.filter h3 {
 
 section.filter a {
     border-radius: 50px;
-    margin: 0;
     font-weight: bold;
     color: black;
 }
@@ -526,7 +525,6 @@ div.article_item:hover img, div.aside_item:hover img, figure:hover img {
 /*==================== Cube 3D ====================*/
 
 .cube {
-    flex: 0 0 auto;
     margin: 0 0px 15px 0;
     height: 50px;
     transform-style: preserve-3d;
@@ -540,11 +538,14 @@ div.article_item:hover img, div.aside_item:hover img, figure:hover img {
 .cube div {
     position: absolute;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     height: 46px;
     border: 2px solid #d9d9d9;
     border-radius: 50px;
+}
+div.cube :nth-child(4) {
+    background-color: darkgoldenrod;
 }
 
 .cube_face1 i, .cube_face2 i {
@@ -574,7 +575,7 @@ div.article_item:hover img, div.aside_item:hover img, figure:hover img {
 }
 
 #filter_pets_allowed {
-    width: 250px;
+    width: 260px;
 }
 
 /*==================== media ====================*/
@@ -718,6 +719,12 @@ div.article_item:hover img, div.aside_item:hover img, figure:hover img {
     }
 
     .article_aside article {
+        justify-content: center;
+    }
+}
+
+@media all and (max-width: 429px) {
+    section.filter {
         justify-content: center;
     }
 }
