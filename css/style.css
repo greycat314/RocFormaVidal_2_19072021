@@ -142,6 +142,7 @@ section.box_search div i {
     font-weight: 600;
     padding: 0 15px;
     border: none;
+    transition: border 300ms ease-in-out;
     border: 1px solid #f2f2f2;
     background-color: #fff;
 }
