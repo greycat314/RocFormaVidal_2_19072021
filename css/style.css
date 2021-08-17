@@ -28,29 +28,6 @@
     font-display: swap;
 }
 
-
-/* @font-face {
-    font-family: "ralewayregular";
-    src: url("../Fonts/Raleway/raleway-regular-webfont.eot");
-    src: url("../Fonts/Raleway/raleway-regular-webfont.woff") format("woff");
-    src: url("../Fonts/Raleway/raleway-regular-webfont.svg#ralewayregular") format("svg");
-    src: url("../Fonts/Raleway/Raleway-Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "ralewaysemibold";
-    src: url("../Fonts/Raleway/raleway-semibold-webfont.eot");
-    src: url("../Fonts/Raleway/raleway-semibold-webfont.eot?#iefix") format("embedded-opentype");
-    src: url("../Fonts/Raleway/raleway-semibold-webfont.woff") format("woff");
-    src: url("../Fonts/Raleway/raleway-semibold-webfont.ttf") format("truetype");
-    src: url("../Fonts/Raleway/raleway-semibold-webfont.svg#ralewaysemibold") format("svg");
-    src: url("../Fonts/Raleway/Raleway-SemiBold.ttf");
-    font-weight: normal;
-    font-style: normal;
-} */
-
 /*==================== html - body - box_main - header ====================*/
 
 html {
