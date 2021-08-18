@@ -12,7 +12,7 @@ html {
 
 body {
     max-width: 1440px;
-    font-family: Raleway, arial, "sans-serif";
+    /* font-family: Raleway, arial, "sans-serif"; */
     font-weight: normal;
     font-style: normal;
     font-size: 1.6rem;
@@ -125,6 +125,7 @@ section.box_search div i {
     transition: border 300ms ease-in-out;
     border: 1px solid #f2f2f2;
     background-color: #fff;
+    font-family: Raleway, arial, "sans-serif";
 }
 
 #city_name:focus {
@@ -137,14 +138,17 @@ section.box_search div i {
     width: 135px;
     height: 50px;
     border: none;
-    box-sizing: border-box;
+    box-sizing: border-box; 
     color: #fff;
     background-color: #0065FC;
+    font-family: Raleway, arial, "sans-serif";
     font-size: 1.8rem;
+    font-weight: bold;
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
     transition: all 300ms ease-in-out 300ms;
     cursor: pointer;
+    
 }
 
 #city_name_submit:hover {
@@ -298,7 +302,7 @@ article div.article_next a {
     height: auto;
     color: black;
     font-size: 1.8rem;
-    font-family: ralewaysemibold, arial, "sans-serif";
+    font-family: Raleway, arial, "sans-serif";
     font-weight: 700;
     line-height: 70px;
 }
@@ -417,7 +421,7 @@ figure figcaption {
     box-sizing: border-box;
     padding: 0 15px;
     font-weight: 700;
-    font-family: ralewaysemibold, arial, "sans-serif";
+    font-family: Raleway, arial, "sans-serif";
     line-height: 55px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
