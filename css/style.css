@@ -478,15 +478,14 @@ a {
 p, h2, h3, h4, h5, h6, a, figure {
     margin: 0;
     padding: 0;
+    font-family: Raleway, arial, "sans-serif";
 }
 
 h2 {
-    font-family: ralewaysemibold, arial, "sans-serif";
     font-size: 2.2rem;
 }
 
 h3 {
-    font-family: ralewaysemibold, arial, "sans-serif";
     font-size: 1.8rem;
 }
 
