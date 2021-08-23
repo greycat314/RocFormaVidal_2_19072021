@@ -4,7 +4,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
-/*==================== html - body - box_main - header ====================*/
+/*  ==================== html - body - box_main - header ====================*/
 
 html {
     font-size: 62.5%;
@@ -588,7 +588,7 @@ div.cube :nth-child(4) {
     }
 }
 
-@media all and (max-width: 1065px) {
+@media all and (max-width: 1094px) {
     section.filter h3 {
         width: 100%;
     }
