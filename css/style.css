@@ -37,7 +37,6 @@ header {
 }
 
 header img {
-    margin-top: 42px;
     padding-bottom: 20px;
 }
 
@@ -64,11 +63,8 @@ header :nth-child(3) {
 }
 
 header :nth-child(4) {
-    order: 4;font-weight: bold;
-}
-
-form {
-    display: flex;
+    order: 4;
+    font-weight: bold;
 }
 
 /*====================  Section - Article - Aside ====================*/
@@ -159,7 +155,7 @@ section.box_search div i {
     border: none;
     box-sizing: border-box;
     padding: 0;
-    background-color: rgba(0, 0, 0, 0)
+    background-color: rgba(0, 0 , 0, 0)
 }
 
 #city_name_button i {
@@ -173,6 +169,10 @@ section.box_search div i {
 #city_name_button i:hover {
     border-radius: 0;
     transition: border-radius 300ms ease-in-out 300ms;
+}
+
+form {
+    display: flex;
 }
 
 /*-------------------- <section class="filter"> -------------------- */
@@ -682,9 +682,6 @@ div.cube :nth-child(4) {
 
     #city_name_submit {
         border: 0px;
-    }
-
-    #city_name_submit {
         display: none;
     }
 }
