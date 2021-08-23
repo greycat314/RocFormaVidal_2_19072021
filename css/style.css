@@ -15,7 +15,7 @@ body {
     font-weight: normal;
     font-style: normal;
     font-size: 1.6rem;
-    background-color: rgb(34, 34, 34);
+    background-color: #fff;
     margin: 0 auto;
 }
 
@@ -232,7 +232,7 @@ div.information img {
 
 /*-------------------- <article> -------------------- */
 
-div.article_aside {
+div.article_aside {background-color: #ff4500;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -285,6 +285,11 @@ article div.article_item p.price {
     font-size: 1.4rem;
 }
 
+.opinion {
+    display: flex;
+    justify-content: flex-start;
+}
+
 article div.article_item p.opinion .opinion_yes {
     color: #0065FC;
     font-size: 1.8rem;
@@ -317,11 +322,11 @@ article div.article_next a {
 /*-------------------- <aside> -------------------- */
 
 aside {
-    width: 415px;
+    max-width: 415px;
     box-sizing: border-box;
-    padding: 35px 30px;
+    padding: 35px 150px;
     border-radius: 25px;
-    background-color: #f2f2f2;
+    background-color: #f2f2f2;background-color: aquamarine;
 }
 
 div .aside_popular {
@@ -329,7 +334,7 @@ div .aside_popular {
     margin-bottom: 25px;
 }
 
-div .aside_popular h2 {
+div .aside_popular h2 {background-color: cadetblue;
     display: inline-block;
     font-weight: bold;
     width: 90%;
@@ -389,7 +394,7 @@ div .aside_popular i {
 
 /*-------------------- <section class="activities"> -------------------- */
 
-section.activities {
+section.activities {background-color: bisque;
     max-width: 1340px;
     margin: 55px 0 50px 0;
 }
